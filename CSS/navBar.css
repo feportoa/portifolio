@@ -28,7 +28,7 @@ nav > .content > .toggleButton > i {
 }
 
 nav > .content > li > .contactList > li {
-    transform: rotate(calc(var(--i) * (360deg/-10))) translateY(12rem);
+    transform: rotate(calc(var(--i) * (360deg/-10))) translateY(10rem);
 }
 
 nav > .content > li,
@@ -45,7 +45,7 @@ nav > .content > li > .contactList{
 }
 
 nav > .content > .toggleButton,
-nav > .content > li,
+nav > .content > li > a,
 nav > .content > li > .contactList {
     display: flex;
     align-items: center;
@@ -53,11 +53,12 @@ nav > .content > li > .contactList {
     width: 6rem;
     height: 6rem;
     background-color: black;
+    text-decoration: none;
 
     border-radius: 50%;
 }
 
-nav > .content > li > .contactList > li {
+nav > .content > li > .contactList > li > a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,6 +67,8 @@ nav > .content > li > .contactList > li {
     background-color: black;
     font-size: 2rem;
     border-radius: 50%;
+
+    text-decoration: none;
 }
 
 nav > .content > li > .contactList > i {
