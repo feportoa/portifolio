@@ -1,0 +1,88 @@
+nav.active {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+}
+
+nav > .content {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 2.5rem;
+    
+    transform: rotate(45deg);
+}
+
+nav > .content > li{
+    transform: rotate(calc(var(--i) * (360deg/-8))) translateY(12rem);
+}
+
+nav > .content > .toggleButton > i {
+    transform: rotate(calc((360deg/-10) - 9deg));
+}
+
+nav > .content > li > .contactList > li {
+    transform: rotate(calc(var(--i) * (360deg/-10))) translateY(12rem);
+}
+
+nav > .content > li,
+nav > .content > li > .contactList > li {
+    position: absolute;
+}
+
+nav > .content > li > a {
+    transform: rotate(calc(var(--i) * (360deg/8) - 45deg));
+}
+
+nav > .content > li > .contactList{
+    transform: rotate(35deg);
+}
+
+nav > .content > .toggleButton,
+nav > .content > li,
+nav > .content > li > .contactList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: black;
+
+    border-radius: 50%;
+}
+
+nav > .content > li > .contactList > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: black;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+nav > .content > li > .contactList > i {
+    transform: rotate(calc(var(--i) * (360deg/8) - 80deg)) 
+}
+
+nav > .content > li > .contactList > li > a {
+    transform: rotate(calc(var(--i) * (360deg/8) - 55deg)) 
+}
+
+nav > .content > li > a,
+nav > .content > li > .contactList > li > a {
+    color: var(--fontColor);
+    
+}
+
+nav > .content,
+nav > .content > li > .contactList {
+    list-style: none;
+}
