@@ -71,6 +71,18 @@ nav > .content > li > .contactList > li > a{
     text-decoration: none;
 }
 
+nav > .content > li > .contactList > .github > a {
+    transform: rotate(75deg);
+}
+
+nav > .content > li > .contactList > .linkedin > a {
+    transform: rotate(37deg);
+}
+
+nav > .content > li > .contactList > .whatsapp > a {
+    transform: rotate(0deg);
+}
+
 nav > .content > li > .contactList > i {
     transform: rotate(calc(var(--i) * (360deg/8) - 80deg)) 
 }
