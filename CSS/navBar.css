@@ -1,13 +1,17 @@
-nav.active {
-    position: absolute;
-    top: 50%;
-    left: 1rem;
-}
-
 nav {
     position: absolute;
     top: 50%;
-    left: 3rem;
+    left: -2.3rem;
+
+    transition: ease 1s;
+    transition-delay: 2s;
+}
+
+nav:hover {
+    position: absolute;
+    margin-left: 3rem;
+
+    transition-delay: .1s;
 }
 
 nav > .content {
@@ -19,14 +23,29 @@ nav > .content {
     transform: rotate(45deg);
 }
 
-nav > .content > li{
+nav > .content > .toggleButton {
+    z-index: 10;
+    color: var(--fontColor);
+}
+
+nav > .content > li {
+    z-index: 0;
+    transition: ease .5s;
+    transition-delay: 2s;
+}
+
+nav:hover > .content > li{
     transform: rotate(calc(var(--i) * (360deg/-8))) translateY(12rem);
+    transition-delay: .6s;
 }
 
 nav > .content > .toggleButton > i {
     transform: rotate(calc((360deg/-10) - 9deg));
 }
 
+nav > .content > li > .contactList > i {
+    color: var(--fontColor);
+}
 
 nav > .content > li,
 nav > .content > li > .contactList > li {
@@ -44,7 +63,7 @@ nav > .content > li > a {
     justify-content: center;
     width: 6rem;
     height: 6rem;
-    background-color: black;
+    background-color: var(--navColor);
     text-decoration: none;
     
     border-radius: 50%;
@@ -56,7 +75,7 @@ nav > .content > li > .contactList > li > a{
     justify-content: center;
     width: 4.5rem;
     height: 4.5rem;
-    background-color: black;
+    background-color: var(--navColor);
     font-size: 2rem;
     border-radius: 50%;
     
@@ -105,7 +124,7 @@ nav > .content > li > .contactList {
     justify-content: center;
     width: 6rem;
     height: 6rem;
-    background-color: black;
+    background-color: var(--navColor);
     text-decoration: none;
 
     border-radius: 50%;
@@ -117,7 +136,7 @@ nav > .content > li > .contactList > i {
     justify-content: center;
     width: 6rem;
     height: 6rem;
-    background-color: black;
+    background-color: var(--navColor);
     text-decoration: none;
 
     border-radius: 50%;
@@ -128,10 +147,20 @@ nav > .content > li > .contactList > li.contactItem {
     z-index: 0;
 
     transition: ease .5s;
-    transition-delay: 3s;
+    transition-delay: 1.9s;
 }
 
 nav > .content > li > .contactList:hover > li{
-    transition-delay: .3s;
+    transition-delay: calc(var(--i) + .2s);
     transform: rotate(calc(var(--i) * (360deg/-10))) translateY(10rem);
+}
+
+nav > .content > li > a,
+nav > .content > li > .contactList > i {
+    transition: ease .5s;
+}
+
+nav > .content > li > a:hover,
+nav > .content > li > .contactList > i:hover {
+    box-shadow: 0 0 7px 0 rgba(164, 0, 164, 0.864);
 }
